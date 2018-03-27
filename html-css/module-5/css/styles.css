@@ -5,7 +5,6 @@
 }
 
 body {
-  width: 1600px;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   color: #ffffff;
   font-size: 18px;
@@ -60,7 +59,11 @@ header {
 
 .menu-item {
   float: right;
-  margin: 0 0 0 20px;
+  margin-left: 20px;
+}
+
+.menu-link {
+  text-decoration: none;
 }
 
 main {
@@ -121,8 +124,13 @@ main {
 
 .sliders {
   margin: 0;
-  height: 0;
+  height: 600px;
   list-style-type: none;
+}
+
+.sliders-foto {
+  width: 1600px;
+  height: 600px;
 }
 
 .sliders img {
@@ -193,7 +201,7 @@ main {
   display: block;
   width: 255px;
   height: 320px;
-  margin-top: o;
+  margin-top: 0;
   float: left;
 }
 
@@ -210,7 +218,6 @@ main {
 .foto {
   width: 255px;
   height: 280px;
-  float: left;
 }
 
 .foto img {
@@ -246,14 +253,17 @@ main {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #737373;
+  transform: rotateX(90deg);
   border: 10px solid;
-  opacity: 0;
   filter: brightness(95%);
+  z-index: 5;
 }
+
 .container:hover .overlay {
-  opacity: 0.75;
+   transform: translateX(-50%);
+  background-color: hsla(0, 0%, 0%, 0.5);
 }
+
 .overlay-icons {
   width: 160px;
   height: 105px;
@@ -273,12 +283,13 @@ main {
   color: #ffffff;
   border: 1px solid;
   border-color: #ffffff;
-  background-color: #737373;
 }
 
 .like {
   left: 0;
+  background-color: hsla(0, 0%, 0%, 0);
 }
+
 .like:hover {
   background-color: #1abc9c;
 }
@@ -286,14 +297,18 @@ main {
 .shuffle {
   left: 50%;
   transform: translateX(-50%);
+  background-color: hsla(0, 0%, 0%, 0);
 }
+
 .shuffle:hover {
   background-color: #1abc9c;
 }
 
 .clock {
   right: 0;
+  background-color: hsla(0, 0%, 0%, 0);
 }
+
 .clock:hover {
   background-color: #1abc9c;
 }
@@ -320,10 +335,12 @@ main {
   border-color: #ffffff;
   background-color: #323232;
 }
+
 .pe-7s-cart {
   font-size: 30px;
 }
-.icon-cart:hover{
+
+.icon-cart:hover {
   background-color: #1abc9c;
 }
 
@@ -333,6 +350,7 @@ main {
   background-color: #323232;
   position: relative;
 }
+
 .rights {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
