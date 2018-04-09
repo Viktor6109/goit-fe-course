@@ -1,6 +1,3 @@
-/* * {
-  outline: 1px solid red;
-} */
 
 * {
   box-sizing: border-box;
@@ -14,11 +11,7 @@
   font-weight: 400;
   src: local("Great Vibes"), local("GreatVibes-Regular"), url("../fonts/great-vibes-v5-latin-regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
   url("../fonts/great-vibes-v5-latin-regular.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* montserrat-regular - latin */
-
+  }
 @font-face {
   font-family: "Montserrat";
   font-style: normal;
@@ -26,18 +19,13 @@
   src: local("Montserrat Regular"), local("Montserrat-Regular"), url("../fonts/montserrat-v12-latin-regular.woff2") format("woff2"), url("../fonts/montserrat-v12-latin-regular.woff") format("woff");
 }
 
-/* montserrat-700 - latin */
-
 @font-face {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
   src: local("Montserrat Bold"), local("Montserrat-Bold"), url("../fonts/montserrat-v12-latin-700.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
   url("../fonts/montserrat-v12-latin-700.woff") format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* roboto-slab-regular - latin */
+  }
 
 @font-face {
   font-family: 'Roboto Slab';
@@ -45,8 +33,7 @@
   font-weight: 400;
   src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'), url('../fonts/roboto-slab-v7-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
   url('../fonts/roboto-slab-v7-latin-regular.woff') format('woff');
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
+  }
 
 header {
   width: 1400px;
@@ -268,7 +255,7 @@ main {
 }
 
 .your-name {
-  width: 455px;
+  width: 440px;
   height: 215px;
   display: flex;
   flex-direction: column;
@@ -279,21 +266,10 @@ main {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: bold;
-  width: 455px;
+  width: 440px;
   height: 50px;
   padding-left: 20px;
   border: none;
-}
-
-.messager {
-  /* font-family: "Montserrat", sans-serif; */
-  /* font-size: 14px; */
-  /* font-weight: bold; */
-  /* width: 455px; */
-  /* height: 210px; */
-  /* padding-left: 20px; */
-  /* padding-top: 20px; */
-  /* border: none; */
 }
 
 .messager textarea {
@@ -303,7 +279,7 @@ main {
   padding-left: 20px;
   padding-top: 15px;
   border: none;
-}
+  }
 
 .send {
   display: inline-block;
