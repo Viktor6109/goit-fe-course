@@ -19,6 +19,7 @@ heder {
   color: #ffffff;
   position: relative;
   margin: auto;
+  padding: 10px;
 }
 
 .feast {
@@ -119,6 +120,7 @@ heder {
 
 main {
   width: 320px;
+  padding: 10px;
   margin: auto;
 }
 
