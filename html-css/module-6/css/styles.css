@@ -6,6 +6,7 @@
 header {
   width: 1200px;
   min-height: 90px;
+  margin: auto;
 }
 .navigation {
   width: 1200px;
@@ -35,6 +36,7 @@ header {
   color: #b0e9de;
   list-style-type: none;
   transition-property: color;
+  margin: auto;
 }
 .menu-item {
   text-decoration: none;

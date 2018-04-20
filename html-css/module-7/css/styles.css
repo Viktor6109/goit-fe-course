@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -9,31 +8,39 @@
   font-family: "Great Vibes";
   font-style: normal;
   font-weight: 400;
-  src: local("Great Vibes"), local("GreatVibes-Regular"), url("../fonts/great-vibes-v5-latin-regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
-  url("../fonts/great-vibes-v5-latin-regular.woff") format("woff");
-  }
+  src: local("Great Vibes"), local("GreatVibes-Regular"),
+    url("../fonts/great-vibes-v5-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/great-vibes-v5-latin-regular.woff") format("woff");
+}
 @font-face {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  src: local("Montserrat Regular"), local("Montserrat-Regular"), url("../fonts/montserrat-v12-latin-regular.woff2") format("woff2"), url("../fonts/montserrat-v12-latin-regular.woff") format("woff");
+  src: local("Montserrat Regular"), local("Montserrat-Regular"),
+    url("../fonts/montserrat-v12-latin-regular.woff2") format("woff2"),
+    url("../fonts/montserrat-v12-latin-regular.woff") format("woff");
 }
 
 @font-face {
   font-family: "Montserrat";
-  font-style: normal;
+  font-style: bold;
   font-weight: 700;
-  src: local("Montserrat Bold"), local("Montserrat-Bold"), url("../fonts/montserrat-v12-latin-700.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
-  url("../fonts/montserrat-v12-latin-700.woff") format("woff");
-  }
+  src: local("Montserrat Bold"), local("Montserrat-Bold"),
+    url("../fonts/montserrat-v12-latin-700.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/montserrat-v12-latin-700.woff") format("woff");
+}
 
 @font-face {
-  font-family: 'Roboto Slab';
+  font-family: "Roboto Slab";
   font-style: normal;
   font-weight: 400;
-  src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'), url('../fonts/roboto-slab-v7-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-  url('../fonts/roboto-slab-v7-latin-regular.woff') format('woff');
-  }
+  src: local("Roboto Slab Regular"), local("RobotoSlab-Regular"),
+    url("../fonts/roboto-slab-v7-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/roboto-slab-v7-latin-regular.woff") format("woff");
+}
 
 header {
   width: 1400px;
@@ -73,13 +80,14 @@ header {
   transition-property: color;
 }
 
-.menu-item {
+.menu-item a{
   font-size: 14px;
   text-decoration: none;
+  color: #222222;
   transition: color 0.2s linear;
 }
 
-.menu-item:hover {
+.menu-item a:hover {
   color: #fed136;
 }
 
@@ -193,7 +201,7 @@ main {
 }
 
 .item-text {
-  font-family: 'Roboto Slab', sans-serif;
+  font-family: "Roboto Slab", sans-serif;
   text-indent: 20px;
   font-size: 14px;
   color: #777777;
@@ -201,22 +209,18 @@ main {
 }
 
 .contact-us {
-  width: 1400px;
   height: 670px;
   background-color: #222222;
-  position: relative;
-}
+ }
 
 .contact {
   width: 100%;
   height: 560px;
   background: url("../img/Map.png");
   background-repeat: no-repeat;
-  background-position: right;
-  background-size: contain;
-  position: absolute;
-  top: 100px;
-  bottom: 10px;
+  background-color: hsla(0, 100%, 100%, 0.5);
+  background-position: 100% 0;
+  margin: auto;
 }
 
 .contact-name {
@@ -279,7 +283,7 @@ main {
   padding-left: 20px;
   padding-top: 15px;
   border: none;
-  }
+}
 
 .send {
   display: inline-block;
@@ -295,21 +299,21 @@ main {
   margin: auto;
   border: none;
 }
-.user:valid{
+.user:valid {
   outline: 3px solid green;
 }
-.user:invalid{
+.user:invalid {
   outline: 3px solid red;
 }
-.profile-form input[type="email"]:valid{
+.profile-form input[type="email"]:valid {
   outline: 3px solid green;
 }
-.profile-form input[type="email"]:invalid{
+.profile-form input[type="email"]:invalid {
   outline: 3px solid red;
 }
-.profile-form textarea:valid{
+.profile-form textarea:valid {
   outline: 3px solid green;
 }
-.profile-form textarea:invalid{
+.profile-form textarea:invalid {
   outline: 3px solid red;
 }

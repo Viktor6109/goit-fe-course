@@ -1,85 +1,85 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: "Playfair Display", Arial, Helvetica, sans-serif;
-    color: #626262;
-    font-size: 14px;
-    line-height: 24px;
+  font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+  color: #626262;
+  font-size: 14px;
+  line-height: 24px;
 }
 
 header {
-    width: 1200px;
-    height: 90px;
-    margin: auto;
+  width: 1200px;
+  height: 90px;
+  margin: auto;
 }
 
 nav {
-    width: 800px;
-    height: 90px;
-    margin: auto;
-    padding: 57px;
+  width: 800px;
+  height: 90px;
+  margin: auto;
+  padding: 57px;
 }
 
 .menu {
-    width: 570px;
-    height: 20px;
-    margin: auto;
+  width: 570px;
+  height: 20px;
+  margin: auto;
 }
 
 .menu a {
-    color: #626266;
-    text-transform: uppercase;
-    list-style: none;
-    width: 1200px;
+  color: #626266;
+  text-transform: uppercase;
+  list-style: none;
 }
 
 .menu a:hover {
-    color: #03a9f4;
+  color: #03a9f4;
 }
 
 .menu-item {
-    display: inline-block;
-    margin: 0 39px;
+  display: inline-block;
+  margin: 0 39px;
 }
 
 .foto-all {
-    margin: auto;
+  margin: auto;
 }
 
 main {
-    width: 1200px;
-    margin: auto;
+  width: 1200px;
+  margin: auto;
 }
 
 .foto-load {
-    display: inline-block;
+  display: inline-block;
 }
 
 .foto-category-description {
-    display: inline-block;
-    width: 420px;
-    list-style: none;
-    margin: 89px;
+  display: inline-block;
+  vertical-align: top;
+  width: 420px;
+  list-style: none;
+  margin: 89px;
 }
-.category{
-    margin: 15px 0;
+.category {
+  margin: 15px 0;
 }
-.description{
-    margin: 15px 0;
+.description {
+  margin: 15px 0;
 }
-   
+
 .button {
-    width: 1200px;
-    height: 80px;
+  width: 1200px;
+  height: 80px;
 }
 
 .more-foto {
-    width: 160px;
-    height: 50px;
-    margin: auto;
-    border: 1px solid black;
-    display: block;
+  width: 160px;
+  height: 50px;
+  margin: auto;
+  border: 1px solid black;
+  display: block;
 }
