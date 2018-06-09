@@ -1,7 +1,8 @@
 'use strict'
 // ЗАДАНИЕ ПОВЫШЕННОЙ СЛОЖНОСТИ
 const passwords = ["qwerty", "111qwe", "123123", "r4nd0mp4zzw0rd"];
-let attempts = 3;
+const attempts = 3;
+let userAttempts = attempts - 1;
 let userPassword;
 let testPassword;
 
@@ -19,17 +20,21 @@ do {
   }
   //если не совпадает вводим attempts раз
   else {
-    attempts -= 1;
+    // attempts -= 1;
     testPassword = false;
-    if (attempts === 1) {
-      alert("Неверный пароль, у вас осталaсь " + attempts + " попытка");
-    } else {
-      alert("Неверный пароль, у вас осталось " + attempts + " попытки");
+    if (userAttempts === 1) {
+      alert("Неверный пароль, у вас осталaсь " + userAttempts + " попытка");
+    }else if(userAttempts === 0){
+      break;
     }
+     else {
+      alert("Неверный пароль, у вас осталось " + userAttempts + " попытки");
+    }
+    userAttempts -= 1;
   }
 }
 //результат провеверки пароля
-while (attempts > 0);
+while (userAttempts >= 0);
 if (testPassword === true) {
   alert("Добро пожаловать!");
 } else if (testPassword === false) {
@@ -39,29 +44,27 @@ if (testPassword === true) {
 
 //СУММА ЧИСЕЛ
 let userInput;
-let numUser = 2;
 const numbers = [];
 let total = 0;
 
 do {
-  do {
-    userInput = prompt("Введите число");
-    numUser = Number(userInput);
-    //Проверка на число
-    if (Number.isNaN(numUser)) {
-      alert("Было введено не число, попробуйте еще раз");
-    }
-  } while (Number.isNaN(numUser));
-  if (userInput !== null) {
-    numbers.push(numUser);
+  userInput = prompt("Введите число");
+  //Проверка на число
+  if (isNaN(userInput)) {
+    alert("Было введено не число, попробуйте еще раз");
+  } else {
+    numbers.push(Number(userInput));
+     }
+  if (userInput === null) {
+    numbers.pop();
     console.log(numbers);
   }
 } while (userInput !== null);
 console.log(numbers.length);
 if (numbers.length > 0) {
   //Цикл для вычисления суммы
-  for (let a = 0; a < numbers.length; a += 1) {
-    total += +numbers[a];
+  for (let i = 0; i < numbers.length; i++) {
+    total += numbers[i];
   }
   alert(total);
 } else {
