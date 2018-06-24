@@ -8,19 +8,21 @@ console.log(login);
 console.log(addLogin(logins, login));
 
 function checkLoginValidity(login) {
-  if (minLogin <= login.length && login.length <= maxLogin) {
-    return true;
-  } else {
-    return false;
-  }
+  // if (minLogin <= login.length && login.length <= maxLogin) {
+  //   return true;
+  // } 
+  //   return false;
+  // }
+  return minLogin <= login.length && login.length <= maxLogin ? true : false;
 }
 
 function checkIfLoginExists(logins, login) {
-  if (logins.includes(login)) {
-    return true;
-  } else {
-    return false;
-  }
+  // if (logins.includes(login)) {
+  //   return true;
+  // } 
+  //   return false;
+  // }
+  return logins.includes(login) ? true : false;
 }
 
 function addLogin(logins, login) {
