@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.image-gallery {
+  max-width: 1280px;
+  height: auto;
+  margin: auto;
+}
+
+.fullview {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  margin: auto;
+  padding: 10px;
+}
+
+.preview {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  /* flex-direction: row; */
+  margin: auto;
+}
+
+.preview li {
+  padding: 10px;
+}
