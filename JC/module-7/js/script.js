@@ -1,6 +1,4 @@
-
-const posts = [
-  {
+const posts = [{
     img: "https://placeimg.com/400/150/arch",
     title: "Post title 1",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nemo dignissimos ea temporibus voluptatem maiores maxime consequatur impedit nobis sunt similique voluptas accusamus consequuntur, qui modi nesciunt veritatis distinctio rem!",
@@ -29,18 +27,26 @@ const createPosteImage = (img) => {
   return posteImage;
 };
 
-const createPosteTitle = (title) => {
-  const posteTitle = document.createElement('h2');
-  posteTitle.classList.add("poste__title");
-  posteTitle.textContent = title;
-  return posteTitle;
-};
+//   const createPosteTitle = (title) => {
+//   const posteTitle = document.createElement('h2');
+//   posteTitle.classList.add("poste__title");
+//   posteTitle.textContent = title;
+//   return posteTitle;
+// };
 
-const createPosteText = (text) => {
-  const posteText = document.createElement("p");
-  posteText.classList.add("poste__text");
-  posteText.textContent = text;
-  return posteText;
+// const createPosteText = (text) => {
+//   const posteText = document.createElement("p");
+//   posteText.classList.add("poste__text");
+//   posteText.textContent = text;
+//   return posteText;
+// };
+
+//правка Гены
+const createPosteTitle = (tag, clas, titles) => {
+  const posteTitle = document.createElement(tag);
+  posteTitle.classList.add(clas);
+  posteTitle.textContent = titles;
+  return posteTitle;
 };
 
 const createButton = () => {
@@ -51,22 +57,29 @@ const createButton = () => {
   return button;
 }
 
-const createPostCard = ({img, title, text}) => {
+const createPostCard = ({
+  img,
+  title,
+  text
+}) => {
   const post = document.createElement('div');
   post.classList.add('post');
 
   const posteImage = createPosteImage(img);
-  const posteTitle = createPosteTitle(title);
-  const posteText = createPosteText(text);
+  const posteTitle = createPosteTitle('h2', "poste__title", title);
+  const posteText = createPosteTitle('p', "poste__text", text);
+  // const posteTitle = createPosteTitle(title);
+  // const posteText = createPosteText(text);
   const button = createButton();
 
   post.append(posteImage, posteTitle, posteText, button);
+  // post.append(posteImage, posteTitle, posteTitles, button);
   return post;
 };
 
 const createCards = (arr) => {
-const element = arr.map(cart => createPostCard(cart));
-return element;
+  const element = arr.map(cart => createPostCard(cart));
+  return element;
 }
 
 const cart = document.querySelector('.cart');
