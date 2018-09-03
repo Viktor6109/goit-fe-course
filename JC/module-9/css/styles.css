@@ -1,0 +1,51 @@
+body {
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.stopwatch {
+  max-width: 900px;
+  text-align: center;
+  font-size: 80px;
+  margin: auto;
+}
+
+.time {
+  width: 600px;
+  height: 150px;
+  margin: auto;
+}
+
+.btn {
+  position: relative;
+  border: none;
+  border-radius: 3px;
+  margin: 0 4px;
+  padding: 0 16px;
+  vertical-align: top;
+  outline: none;
+  font-size: 20px;
+  line-height: 2.8;
+  font-family: inherit;
+  color: #222;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  background-color: rgb(185, 179, 179);
+  overflow: hidden;
+  z-index: 0;
+  cursor: pointer;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+  min-width: 150px;
+  min-height: 60px;
+  font-weight: 500;
+  font-family: inherit;
+}
+.laps {
+  margin-left: 20px;
+  font-size: 25px;
+}
