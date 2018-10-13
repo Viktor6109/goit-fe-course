@@ -29,11 +29,13 @@ let filter = {
   color: [],
   release_date: []
 }
+const laptopGrid = document.querySelector('.laptop-grid');
+const source = document.querySelector('#laptop').innerHTML.trim();
 
 const refs = {
   submitBtn: document.querySelector('.js-submitBtn'),
   refsetBtn: document.querySelector('.js-refsetBtn'),
-  }
+}
 
 refs.submitBtn.addEventListener('click', handleSubmitBtn);
 refs.refsetBtn.addEventListener('click', handleRefsetBtn)
@@ -131,8 +133,6 @@ function handleSubmitBtn(e) {
   deleteListLaptop();
   filterLaptop();
   listLaptop();
-  const laptopGrid = document.querySelector('.laptop-grid');
-  const source = document.querySelector('#laptop').innerHTML.trim();
   const template = Handlebars.compile(source);
   const addLaptop = laptopsFilters.reduce((acc, elemnt) => acc + template(elemnt), '');
   laptopGrid.insertAdjacentHTML('afterbegin', addLaptop);
