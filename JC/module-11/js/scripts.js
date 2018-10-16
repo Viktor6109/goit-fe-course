@@ -122,7 +122,7 @@ const laptops = [{
     descr: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, beatae.',
   },
 ];
- 
+
 allLaptop();
 
 function handleSubmitBtn(e) {
@@ -141,11 +141,8 @@ function handleSubmitBtn(e) {
 };;
 
 function handleRefsetBtn() {
-  // location.reload() //перезагружает страицу
   deleteListLaptop();
-  const template = Handlebars.compile(source);
-  const addLaptop = laptops.reduce((acc, elemnt) => acc + template(elemnt), '');
-  laptopGrid.insertAdjacentHTML('afterbegin', addLaptop);
+  allLaptop();
 };
 
 function allLaptop() {
