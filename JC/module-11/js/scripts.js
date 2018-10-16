@@ -122,6 +122,8 @@ const laptops = [{
     descr: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, beatae.',
   },
 ];
+ 
+allLaptop();
 
 function handleSubmitBtn(e) {
   e.preventDefault();
@@ -132,18 +134,28 @@ function handleSubmitBtn(e) {
   }
   deleteListLaptop();
   filterLaptop();
-  listLaptop();
+  listLaptopFilter();
   const template = Handlebars.compile(source);
   const addLaptop = laptopsFilters.reduce((acc, elemnt) => acc + template(elemnt), '');
   laptopGrid.insertAdjacentHTML('afterbegin', addLaptop);
-}
+};;
 
 function handleRefsetBtn() {
-  location.reload()
-}
+  // location.reload() //перезагружает страицу
+  deleteListLaptop();
+  const template = Handlebars.compile(source);
+  const addLaptop = laptops.reduce((acc, elemnt) => acc + template(elemnt), '');
+  laptopGrid.insertAdjacentHTML('afterbegin', addLaptop);
+};
+
+function allLaptop() {
+  const template = Handlebars.compile(source);
+  const addLaptop = laptops.reduce((acc, elemnt) => acc + template(elemnt), '');
+  laptopGrid.insertAdjacentHTML('afterbegin', addLaptop);
+};
 
 function filterLaptop() {
-  const chbInput = document.querySelectorAll('input')
+  const chbInput = document.querySelectorAll('input');
   chbInput.forEach((input) => {
     if (input.checked) {
       if (input.name === "size") {
@@ -159,7 +171,7 @@ function filterLaptop() {
   })
 };
 
-function listLaptop() {
+function listLaptopFilter() {
   laptopsFilters = laptops
     .filter(element => filter.color.includes(element.color))
     .filter(element => filter.size.includes(String(element.size)))
@@ -170,4 +182,4 @@ function deleteListLaptop() {
   const myNode = document.querySelector(".laptop-grid");
   if (myNode === null) return;
   myNode.innerHTML = '';
-}
+};
