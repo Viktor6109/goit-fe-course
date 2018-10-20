@@ -22,19 +22,19 @@
       после чего в нем рендерятся новые карточки товаров, соответствующих текущим критериям фильтра.
 */
 
-
-let laptopsFilters;
-let filter = {
+let filterArray = {
   size: [],
   color: [],
   release_date: []
 }
+
 const laptopGrid = document.querySelector('.laptop-grid');
 const source = document.querySelector('#laptop').innerHTML.trim();
 
 const refs = {
   submitBtn: document.querySelector('.js-submitBtn'),
   refsetBtn: document.querySelector('.js-refsetBtn'),
+  chbInput: document.querySelectorAll('input'),
 }
 
 refs.submitBtn.addEventListener('click', handleSubmitBtn);
@@ -127,22 +127,22 @@ allLaptop();
 
 function handleSubmitBtn(e) {
   e.preventDefault();
-  filter = {
+  filterArray = {
     size: [],
     color: [],
     release_date: []
-  }
+  };
   deleteListLaptop();
-  filterLaptop();
+  filter();
   listLaptopFilter();
   const template = Handlebars.compile(source);
   const addLaptop = laptopsFilters.reduce((acc, elemnt) => acc + template(elemnt), '');
   laptopGrid.insertAdjacentHTML('afterbegin', addLaptop);
-};;
+};
 
 function handleRefsetBtn() {
-  deleteListLaptop();
-  allLaptop();
+  deleteListLaptop()
+  allLaptop()
 };
 
 function allLaptop() {
@@ -151,28 +151,48 @@ function allLaptop() {
   laptopGrid.insertAdjacentHTML('afterbegin', addLaptop);
 };
 
-function filterLaptop() {
-  const chbInput = document.querySelectorAll('input');
-  chbInput.forEach((input) => {
+function filter() {
+  refs.chbInput.forEach((input) => {
     if (input.checked) {
-      if (input.name === "size") {
-        filter.size.push(input.value);
-      }
       if (input.name === "color") {
-        filter.color.push(input.value);
+        filterArray.color.push(input.value);
+      }
+      if (input.name === "size") {
+        filterArray.size.push(input.value);
       }
       if (input.name === "release_date") {
-        filter.release_date.push(input.value);
+        filterArray.release_date.push(input.value);
       }
     }
   })
-};
+  if (filterArray.color.length === 0) {
+    refs.chbInput.forEach((input) => {
+      if (input.name === "color") {
+        filterArray.color.push(input.value);
+      }
+    })
+  }
+  if (filterArray.size.length === 0) {
+    refs.chbInput.forEach((input) => {
+      if (input.name === "size") {
+        filterArray.size.push(input.value);
+      }
+    })
+  }
+  if (filterArray.release_date.length === 0) {
+    refs.chbInput.forEach((input) => {
+      if (input.name === "release_date") {
+        filterArray.release_date.push(input.value);
+      }
+    })
+  }
+}
 
 function listLaptopFilter() {
   laptopsFilters = laptops
-    .filter(element => filter.color.includes(element.color))
-    .filter(element => filter.size.includes(String(element.size)))
-    .filter(element => filter.release_date.includes(String(element.release_date)))
+    .filter(element => filterArray.color.includes(String(element.color)))
+    .filter(element => filterArray.release_date.includes(String(element.release_date)))
+    .filter(element => filterArray.size.includes(String(element.size)))
 };
 
 function deleteListLaptop() {
